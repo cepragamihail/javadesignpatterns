@@ -1,6 +1,6 @@
-package com.java.design.patterns.creational.prototype;
+package com.java.design.patterns.creational.prototype.cloneable;
 
-public class Address {
+public class Address implements Cloneable {
 
     public String streetName;
     public int houseNumber;
@@ -14,6 +14,12 @@ public class Address {
     @Override
     public String toString() {
         return "Street Name :" + this.streetName + ", House Number: " + houseNumber;
+    }
+
+    // Deep copy
+    @Override
+    public Address clone() throws CloneNotSupportedException  {
+        return new Address(streetName, houseNumber);
     }
 
 }
