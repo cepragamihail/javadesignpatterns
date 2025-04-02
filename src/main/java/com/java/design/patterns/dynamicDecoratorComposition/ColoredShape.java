@@ -1,5 +1,9 @@
 package com.java.design.patterns.dynamicDecoratorComposition;
 
+import com.java.design.patterns.decoratorUtils.Circle;
+import com.java.design.patterns.decoratorUtils.Shape;
+import com.java.design.patterns.decoratorUtils.Square;
+
 public class ColoredShape implements Shape {
 
     private Shape shape;

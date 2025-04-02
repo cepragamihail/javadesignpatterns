@@ -1,4 +1,4 @@
-package com.java.design.patterns.dynamicDecoratorComposition;
+package com.java.design.patterns.decoratorUtils;
 
 public class Circle implements Shape {
 
@@ -10,7 +10,7 @@ public class Circle implements Shape {
         this.radius = radius;
     }
 
-    void resize(float factor) {
+    public void resize(float factor) {
         this.radius *= factor;
     }
     @Override

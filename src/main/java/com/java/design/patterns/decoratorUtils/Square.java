@@ -1,4 +1,4 @@
-package com.java.design.patterns.dynamicDecoratorComposition;
+package com.java.design.patterns.decoratorUtils;
 
 public class Square implements Shape {
 
@@ -10,7 +10,7 @@ public class Square implements Shape {
         this.side = side;
     }
 
-    void resize(float factor) {
+    public void resize(float factor) {
         this.side *= factor;
     }
     @Override
