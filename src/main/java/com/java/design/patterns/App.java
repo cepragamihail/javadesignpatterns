@@ -4,6 +4,8 @@ import com.java.design.patterns.DeliveryService.Book;
 import com.java.design.patterns.DeliveryService.CompositeBox;
 import com.java.design.patterns.DeliveryService.DeliveryService;
 import com.java.design.patterns.DeliveryService.VideoGame;
+import com.java.design.patterns.neuralNetworks.Neuron;
+import com.java.design.patterns.neuralNetworks.NeuronLayer;
 
 /**
  * Hello world!
@@ -17,6 +19,8 @@ public class App
         // Uncomment the line below to run the composite pattern example
         System.out.println("Composite Pattern Example:");
         compositePatternExample();
+        System.out.println("Composite Pattern Example of Neural Network:");
+        compositePatternExampleOfNeuralNetwork();
     }
 
     public static void compositePatternExample() {     
@@ -40,4 +44,27 @@ public class App
         double totalPrice = deliveryService.calculateTotalCost();
         System.out.println("Total price: " + totalPrice);
     } 
+
+    public static void compositePatternExampleOfNeuralNetwork() { 
+        // Create a neuron
+        Neuron neuron1 = new Neuron();
+        Neuron neuron2 = new Neuron();
+        // Create a neuron layer
+        NeuronLayer layer1 = new NeuronLayer();
+        // Create another neuron layer
+        NeuronLayer layer2 = new NeuronLayer();
+
+        // Connect the layers
+        neuron1.connectTo(neuron2);
+        neuron1.connectTo(layer1);
+        layer1.connectTo(neuron1);
+        layer1.connectTo(layer2);
+
+
+        // Iterate through the neurons in the first layer
+        for (Neuron neuron : layer1) {
+            System.out.println(neuron);
+        }
+
+    }
 }
