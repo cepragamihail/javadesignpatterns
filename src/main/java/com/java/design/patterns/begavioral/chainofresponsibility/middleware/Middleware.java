@@ -1,4 +1,4 @@
-package com.java.design.patterns.begavioral.middleware;
+package com.java.design.patterns.begavioral.chainofresponsibility.middleware;
 
 public abstract class Middleware {
 
@@ -13,7 +13,7 @@ public abstract class Middleware {
         return first;
     }
     public abstract boolean check(String email, String password);
-    
+
     protected boolean checkNext(String email, String password) {
         if (next == null) {
             return true;

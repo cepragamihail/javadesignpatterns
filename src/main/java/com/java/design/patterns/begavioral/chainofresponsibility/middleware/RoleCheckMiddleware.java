@@ -1,4 +1,4 @@
-package com.java.design.patterns.begavioral.middleware;
+package com.java.design.patterns.begavioral.chainofresponsibility.middleware;
 
 public class RoleCheckMiddleware extends Middleware {
     @Override

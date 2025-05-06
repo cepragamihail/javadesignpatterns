@@ -1,4 +1,4 @@
-package com.java.design.patterns.begavioral.middleware;
+package com.java.design.patterns.begavioral.chainofresponsibility.middleware;
 
 import java.io.BufferedReader;
 import java.io.IOException;
